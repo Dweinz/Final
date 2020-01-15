@@ -1,5 +1,5 @@
 function StartConnection (){
-    this.game = UnityLoader.instantiate("unityContainer", "Build/Lmao.json", {onProgress: UnityProgress});
+    this.game = UnityLoader.instantiate("unityContainer", "Build/Lmao.json");
     this.connection = new signalR.HubConnectionBuilder()
     .withUrl("http://localhost:60568/rabbitmqclienthub", {
       skipNegotiation: true,
